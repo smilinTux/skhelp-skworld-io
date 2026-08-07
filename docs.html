@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SKWorld repo-docs viewer — renders smilinTux/skhelp docs/*.md live, SKWorld house style. -->
+  <!-- SKWorld repo-docs viewer — renders smilinTux/skhelp docs/*.md live -->
 
-  <title>Docs — skhelp · AI Workforce as a Service</title>
-  <meta name="description" content="skhelp documentation — architecture of the commercial AI Workforce-as-a-Service front end of the SKWorld sovereign ecosystem. Rendered live from the public smilinTux/skhelp repo.">
+  <title>Docs — SKHelp · Your AI Workforce. Your Success. Your Data.</title>
+  <meta name="description" content="Industry-specific AI agents for small businesses. Real estate, legal, healthcare, trades — sovereign and private.">
 
   <link rel="canonical" href="https://skhelp.skworld.io/docs.html">
   <meta name="robots" content="index,follow">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Docs — skhelp · AI Workforce as a Service">
-  <meta property="og:description" content="skhelp documentation — architecture of the commercial AI Workforce-as-a-Service front end of the SKWorld sovereign ecosystem. Rendered live from the source repo.">
+  <meta property="og:title" content="Docs — SKHelp · Your AI Workforce. Your Success. Your Data.">
+  <meta property="og:description" content="Industry-specific AI agents for small businesses. Real estate, legal, healthcare, trades — sovereign and private.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://skhelp.skworld.io/docs.html">
-  <meta property="og:site_name" content="skhelp · SKWorld">
+  <meta property="og:site_name" content="SKHelp · SKWorld">
   <meta property="og:image" content="https://skhelp.skworld.io/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://skhelp.skworld.io/og.png">
@@ -322,10 +322,11 @@
   <!-- NAV — replace the section links with your own site anchors -->
   <nav class="site-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">🐧 <span>sk</span>help</a>
+      <a href="/" class="nav-logo">🐧 <span>SKHelp</span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle docs menu">☰ Docs</button>
       <ul class="nav-links">
-        <li><a href="https://skhelp.io/">Product</a></li>
+        <li><a href="https://skhelp.skworld.io/#features">Features</a></li>
+        <li><a href="https://skarchitect.io">SKArchitect</a></li>
         <li><a href="/docs.html" class="active">Docs</a></li>
         <li><a href="https://skworld.io">SKWorld</a></li>
         <li><a href="https://github.com/smilinTux/skhelp" target="_blank" rel="noopener">GitHub</a></li>
@@ -352,7 +353,7 @@
 
     <!-- Main -->
     <main class="docs-main">
-      <a href="/" class="doc-back">← skhelp home</a>
+      <a href="/" class="doc-back">← SKHelp home</a>
 
       <div class="doc-toolbar">
         <div class="doc-path" id="docPath"></div>
@@ -386,11 +387,11 @@
 
     /* ════════════════ CONFIG — the only lines a new site must set ════════════════
        Adopting a site = set REPO (+ BRANCH if not "main"). Everything else derives. */
-    const REPO        = "smilinTux/skhelp";    // public GitHub repo the docs live in
+    const REPO        = "smilinTux/skhelp";  // public GitHub repo the docs live in
     const BRANCH      = "main";                // branch to render from
     const DOCS_PATH   = "docs";                // folder in the repo holding *.md
     const DEFAULT_DOC = "ARCHITECTURE.md";     // doc shown when no ?doc= param (e.g. README.md)
-    const SITE_LABEL  = "skhelp";              // used in <title> and status text
+    const SITE_LABEL  = "SKHelp";       // used in <title> and status text
     /* ═════════════════════════════════════════════════════════════════════════════ */
 
     const API_LIST   = `https://api.github.com/repos/${REPO}/contents/${DOCS_PATH}`;

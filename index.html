@@ -1,40 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>skhelp — redirecting to skhelp.io</title>
-<meta name="description" content="skhelp.skworld.io is an alias for the skhelp.io site. Redirecting…">
-<!-- Canonical points to the apex FQDN: it stays the primary, indexed site (no duplicate content) -->
-<link rel="canonical" href="https://skhelp.io/">
-<meta http-equiv="refresh" content="0; url=https://skhelp.io/">
-<meta name="robots" content="noindex, follow">
-<meta property="og:type" content="website">
-<meta property="og:title" content="skhelp · SKWorld">
-<meta property="og:description" content="The skhelp project — part of the SKWorld sovereign AI ecosystem.">
-<meta property="og:url" content="https://skhelp.io/">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐧</text></svg>">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',system-ui,sans-serif;background:radial-gradient(ellipse at top,#11131f 0%,#08080f 60%);color:#e0e0e0;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.box{padding:2rem}
-.icon{font-size:3.5rem;margin-bottom:1rem}
-h1{font-size:1.6rem;font-weight:700;color:#ffd700;margin-bottom:.5rem}
-p{color:rgba(255,255,255,.7);margin-bottom:1.2rem}
-a{color:#67e8f9;text-decoration:none;border:1px solid rgba(103,232,249,.35);padding:.6rem 1.3rem;border-radius:10px;font-family:'JetBrains Mono',monospace;font-size:.9rem;transition:all .3s}
-a:hover{border-color:#67e8f9;color:#fff}
-.brand{margin-top:2rem;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:rgba(255,255,255,.35)}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKHelp -- Your AI Workforce. Your Success. Your Data.</title>
+    <meta name="description" content="Industry-specific AI agents for small businesses. Real estate, legal, healthcare, trades -- sovereign and private.">
+    <link rel="canonical" href="https://skhelp.skworld.io/">
+    <meta property="og:title" content="SKHelp -- Your AI Workforce. Your Success. Your Data.">
+    <meta property="og:description" content="Industry-specific AI agents for small businesses. Real estate, legal, healthcare, trades -- sovereign and private.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skhelp.skworld.io">
+    <meta property="og:site_name" content="SKWorld">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SKHelp -- Your AI Workforce. Your Success. Your Data.">
+    <meta name="twitter:description" content="Industry-specific AI agents for small businesses. Real estate, legal, healthcare, trades -- sovereign and private.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%8E%A7</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://smilintux.github.io/#organization",
+          "name": "smilinTux",
+          "url": "https://smilintux.github.io",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://skhelp.skworld.io/logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "sameAs": ["https://github.com/smilinTux"],
+          "description": "Sovereign AI infrastructure — building open, authentic, human-first technology. Home of the Pengu Empire.",
+          "foundingDate": "2024",
+          "knowsAbout": ["Sovereign AI", "AI agent infrastructure", "Open source security", "Persistent AI memory", "Decentralized identity"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://skhelp.skworld.io/#website",
+          "name": "SKHelp",
+          "url": "https://skhelp.skworld.io",
+          "publisher": {"@id": "https://smilintux.github.io/#organization"},
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://skhelp.skworld.io/#app",
+          "name": "SKHelp",
+          "description": "Industry-specific AI agents for small businesses. Real estate, legal, healthcare, trades — sovereign and private. Your AI workforce, your data.",
+          "url": "https://skhelp.skworld.io",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Linux, macOS",
+          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+          "license": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+          "codeRepository": "https://github.com/smilinTux/skhelp-io",
+          "isPartOf": {"@type": "SoftwareApplication", "name": "SKWorld", "url": "https://skworld.io"},
+          "publisher": {"@id": "https://smilintux.github.io/#organization"}
+        }
+      ]
+    }
+    </script>
+    <style>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #09090b;
+        color: #fafafa;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* ── Nav ─────────────────────────────────── */
+      .nav {
+        border-bottom: 1px solid #27272a;
+        background: #09090b;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      .nav-inner {
+        max-width: 72rem;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+        padding: 0 1rem;
+      }
+      .nav-logo {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #fafafa;
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .nav-link {
+        font-size: 0.875rem;
+        color: #a1a1aa;
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .nav-link:hover {
+        color: #fafafa;
+      }
+
+      /* ── Hero ────────────────────────────────── */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5rem 1rem 3rem;
+      }
+      .hero-icon {
+        color: #34d399;
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+      .hero .tagline {
+        font-size: 1.25rem;
+        color: #a1a1aa;
+        max-width: 40rem;
+        margin-bottom: 2rem;
+      }
+      .hero .cta-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* ── Buttons ─────────────────────────────── */
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: #059669;
+        color: #fafafa;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: background 0.15s;
+        border: none;
+        cursor: pointer;
+      }
+      .btn-primary:hover {
+        background: #047857;
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: transparent;
+        color: #fafafa;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        border: 1px solid #3f3f46;
+        text-decoration: none;
+        transition: border-color 0.15s, color 0.15s;
+        cursor: pointer;
+      }
+      .btn-outline:hover {
+        border-color: #a1a1aa;
+      }
+
+      /* ── Description ─────────────────────────── */
+      .desc-section {
+        max-width: 48rem;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+        text-align: center;
+      }
+      .desc-section p {
+        font-size: 1.125rem;
+        color: #a1a1aa;
+        line-height: 1.7;
+      }
+
+      /* ── Features ────────────────────────────── */
+      .features-section {
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
+      }
+      .features-section h2 {
+        text-align: center;
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+        color: #fafafa;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      .feature-card {
+        border: 1px solid #27272a;
+        background: rgba(24,24,27,0.5);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        transition: border-color 0.2s, transform 0.2s;
+        position: relative;
+      }
+      .feature-card:hover {
+        border-color: #34d399;
+        transform: translateY(-2px);
+      }
+      .feature-dot {
+        width: 8px;
+        height: 8px;
+        background: #34d399;
+        border-radius: 50%;
+        margin-bottom: 0.75rem;
+      }
+      .feature-card h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #34d399;
+      }
+
+      /* ── Install ─────────────────────────────── */
+      .install-section {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
+        text-align: center;
+      }
+      .install-section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #fafafa;
+      }
+      .code-block {
+        background: #18181b;
+        border: 1px solid #27272a;
+        border-radius: 0.5rem;
+        padding: 1rem 1.25rem;
+        font-family: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+        font-size: 0.95rem;
+        color: #34d399;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+      }
+      .code-prompt {
+        color: #a1a1aa;
+        user-select: none;
+      }
+      .copy-btn {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #27272a;
+        border: 1px solid #3f3f46;
+        color: #a1a1aa;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.375rem;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: color 0.15s, border-color 0.15s;
+        font-family: 'Geist', system-ui, sans-serif;
+      }
+      .copy-btn:hover {
+        color: #fafafa;
+        border-color: #a1a1aa;
+      }
+
+      /* ── DID Banner ──────────────────────────── */
+      .did-banner {
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 0 1rem 3rem;
+      }
+      .did-banner-inner {
+        border: 1px solid rgba(5,150,105,0.3);
+        background: rgba(6,78,59,0.15);
+        border-radius: 0.75rem;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .did-banner-inner .did-icon {
+        color: #34d399;
+        flex-shrink: 0;
+      }
+      .did-banner-inner .did-icon svg {
+        width: 32px;
+        height: 32px;
+      }
+      .did-banner-inner h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #34d399;
+        margin-bottom: 0.25rem;
+      }
+      .did-banner-inner p {
+        font-size: 0.875rem;
+        color: #a1a1aa;
+      }
+      .did-banner-inner .btn-primary {
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      /* ── Architect Banner ────────────────────── */
+      .architect-banner {
+        border-top: 1px solid #27272a;
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
+      .architect-banner p {
+        font-size: 0.95rem;
+        color: #a1a1aa;
+      }
+      .architect-banner a {
+        color: #34d399;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .architect-banner a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── Footer ──────────────────────────────── */
+      .footer {
+        border-top: 1px solid #27272a;
+        background: #09090b;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 0.875rem;
+        color: #71717a;
+      }
+      .footer .motto {
+        margin-top: 0.5rem;
+        color: #52525b;
+      }
+
+      /* ── Own the Full Vertical band ─────────── */
+      .vertical-band {
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 0 1rem 3rem;
+      }
+      .vertical-band-inner {
+        border: 1px solid rgba(52,211,153,0.25);
+        background: linear-gradient(135deg, rgba(6,78,59,0.2) 0%, rgba(5,150,105,0.08) 60%, rgba(0,0,0,0) 100%);
+        border-radius: 0.75rem;
+        padding: 2.5rem;
+        text-align: center;
+      }
+      .vertical-kicker {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 0.75rem; letter-spacing: 0.15em;
+        text-transform: uppercase; color: #34d399;
+        margin-bottom: 1rem; display: block;
+      }
+      .vertical-headline {
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+        font-weight: 700; line-height: 1.2;
+        color: #fafafa; margin-bottom: 1rem;
+      }
+      .vertical-headline span { color: #34d399; }
+      .vertical-manifesto {
+        font-size: 1rem; color: #a1a1aa;
+        line-height: 1.7; max-width: 42rem;
+        margin: 0 auto 1.25rem;
+      }
+      .vertical-manifesto strong { color: #fafafa; }
+      .vertical-sovereignty {
+        font-size: 0.9rem; color: #71717a;
+        margin-bottom: 1.75rem; font-style: italic;
+      }
+      .vertical-sovereignty strong { color: #a1a1aa; font-style: normal; }
+      .vertical-links {
+        display: flex; flex-wrap: wrap; gap: 0.6rem;
+        justify-content: center; margin-bottom: 1.75rem;
+      }
+      .vertical-link {
+        display: inline-flex; align-items: center; gap: 0.35rem;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(52,211,153,0.2);
+        border-radius: 20px; padding: 0.4rem 1rem;
+        font-size: 0.8rem; color: #a1a1aa;
+        text-decoration: none; transition: all 0.2s;
+      }
+      .vertical-link:hover {
+        border-color: #34d399; color: #34d399;
+        background: rgba(52,211,153,0.05);
+      }
+      .vertical-link.current {
+        border-color: rgba(52,211,153,0.5);
+        color: #34d399; font-weight: 600;
+        background: rgba(52,211,153,0.08);
+      }
+      .vertical-cta-row {
+        display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;
+      }
+
+      /* ── Mobile ──────────────────────────────── */
+      @media (max-width: 768px) {
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          gap: 1rem;
+        }
+        .did-banner-inner {
+          flex-direction: column;
+          text-align: center;
+        }
+        .did-banner-inner .btn-primary {
+          margin-left: 0;
+        }
+        .hero .cta-row {
+          flex-direction: column;
+          width: 100%;
+          padding: 0 1rem;
+        }
+        .hero .cta-row a {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
 </head>
 <body>
-<div class="box">
-<div class="icon">🐧</div>
-<h1>Redirecting to skhelp.io…</h1>
-<p>This is the SKWorld subdomain alias for <strong>skhelp</strong>.</p>
-<a href="https://skhelp.io/">Continue to skhelp.io →</a>
-<div style="margin-top:1rem"><a href="/docs.html" style="font-size:.8rem">Docs →</a></div>
-<div class="brand">🐧 part of the SKWorld ecosystem · <a style="border:none;padding:0;font-size:.8rem;" href="https://skworld.io">skworld.io</a></div>
-</div>
-<script>location.replace("https://skhelp.io/"+location.pathname.replace(/^\//,'')+location.search+location.hash);</script>
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="https://skhelp.skworld.io" class="nav-logo">SK<span style="color:#34d399">Help</span></a>
+        <div class="nav-links">
+            <a href="/docs.html" class="nav-link">Docs</a>
+            <a href="https://skworld.io" class="nav-link">SKWorld</a>
+            <a href="https://skarchitect.io" class="nav-link">SKArchitect</a>
+            <a href="https://github.com/smilinTux/skhelp" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg></div>
+      <h1>SK<span style="color:#34d399">Help</span></h1>
+      <p class="tagline">Your AI Workforce. Your Success. Your Data.</p>
+      <p style="font-size:0.9rem;color:#52525b;margin-top:-1rem;margin-bottom:1.5rem;font-style:italic;">Your data never leaves. Your keys never leave. Own the full vertical.</p>
+      <div class="cta-row">
+          <a href="#install" class="btn-primary">Get Started</a>
+          <a href="https://github.com/smilinTux/skhelp" class="btn-outline" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="desc-section">
+      <p>Industry-specific AI agents for small businesses. Real estate, legal, healthcare, trades -- sovereign and private.</p>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+      <h2>Features</h2>
+      <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-dot"></div>
+              <h3>Industry-Trained Agents</h3>
+            </div>
+            <div class="feature-card">
+              <div class="feature-dot"></div>
+              <h3>Sovereign Customer Data</h3>
+            </div>
+            <div class="feature-card">
+              <div class="feature-dot"></div>
+              <h3>Workflow Automation</h3>
+            </div>
+            <div class="feature-card">
+              <div class="feature-dot"></div>
+              <h3>Multi-Channel Presence</h3>
+            </div>
+            <div class="feature-card">
+              <div class="feature-dot"></div>
+              <h3>Private Analytics</h3>
+            </div>
+            <div class="feature-card">
+              <div class="feature-dot"></div>
+              <h3>SKWorld Integration</h3>
+            </div>
+      </div>
+    </section>
+
+      <section class="install-section">
+        <h2>Get Started</h2>
+        <div class="code-block">
+          <span class="code-prompt">$</span> pip install skhelp
+          <button class="copy-btn" onclick="navigator.clipboard.writeText('pip install skhelp');this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)">Copy</button>
+        </div>
+      </section>
+
+      <section class="architect-banner">
+        <p>Shape the future &rarr; <a href="https://skarchitect.io">Submit proposals and vote at skarchitect.io</a></p>
+      </section>
+
+    <!-- Own the Full Vertical -->
+    <div class="vertical-band" id="vertical" aria-labelledby="vertical-heading">
+      <div class="vertical-band-inner">
+        <span class="vertical-kicker">Own the Full Vertical</span>
+        <h2 class="vertical-headline" id="vertical-heading">
+          SKHelp is your <span>Apps layer</span>.<br>Your AI workforce — your data, your success.
+        </h2>
+        <p class="vertical-manifesto">
+          The modern stack is rented. Your customer data lives on someone else's disk, behind someone else's key,
+          served by a model that phones home. <strong>SKHelp is different.</strong>
+          Industry-specific AI agents that run on your infrastructure — no SaaS lock-in, no data harvesting,
+          no subscription that owns your workflow. Your AI workforce, your data, your success.
+        </p>
+        <p class="vertical-sovereignty">
+          <strong>Your data never leaves. Your keys never leave.</strong>
+          No cloud you don't control, no vendor you can't walk away from.
+          Sovereignty isn't a feature — it's the foundation.
+        </p>
+        <!-- Ecosystem as vertical layers -->
+        <div class="vertical-links" role="list" aria-label="SKWorld vertical layers">
+          <a href="https://souls.skworld.io" class="vertical-link" role="listitem">🎭 Soul</a>
+          <a href="https://skarchitect.io" class="vertical-link" role="listitem">⚒️ Apps</a>
+          <a href="https://skcomm.io" class="vertical-link" role="listitem">💬 Comms</a>
+          <a href="https://skmemory.io" class="vertical-link" role="listitem">🧠 Data</a>
+          <a href="https://capauth.io" class="vertical-link" role="listitem">🔐 Identity</a>
+          <a href="https://sksecurity.io" class="vertical-link" role="listitem">🛡️ Security</a>
+          <a href="https://skos.skworld.io" class="vertical-link" role="listitem">🐧 OS (skos)</a>
+        </div>
+        <div class="vertical-cta-row">
+          <a href="https://skworld.io" class="btn-primary" style="font-size:0.9rem;padding:0.65rem 1.4rem;">
+            🌍 See the whole vertical →
+          </a>
+          <a href="https://github.com/smilinTux/skhelp" class="btn-outline" style="font-size:0.9rem;padding:0.65rem 1.4rem;" target="_blank" rel="noopener">
+            Own it on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Part of the <a href="https://skworld.io" style="color:#34d399;text-decoration:none">SKWorld</a> sovereign ecosystem</p>
+      <p class="motto">staycuriousANDkeepsmilin</p>
+    </footer>
 </body>
 </html>
