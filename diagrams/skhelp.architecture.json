@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "skhelp Component Map",
+    "subtitle": "AI workforce platform: a Compute-tier product built on the SKWorld sovereign stack",
+    "output": "skhelp.architecture.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    { "id": "customer", "type": "external", "label": "Customer / SMB", "sublabel": "subscribes, onboards", "pos": [540, 40], "size": [220, 60] },
+    { "id": "skhelp", "type": "backend", "label": "skhelp", "sublabel": "AI workforce platform", "pos": [540, 170], "size": [220, 70] },
+
+    { "id": "skmodel", "type": "backend", "label": "skmodel (ollama)", "sublabel": "agent reasoning engine", "pos": [210, 320], "size": [200, 64] },
+    { "id": "skflow", "type": "backend", "label": "skflow", "sublabel": "automation runtime", "pos": [540, 320], "size": [200, 64] },
+    { "id": "skdata", "type": "database", "label": "skmem-pg", "sublabel": "customer data + knowledge", "pos": [870, 320], "size": [200, 64] },
+
+    { "id": "capauth", "type": "security", "label": "capauth", "sublabel": "sovereign identity", "pos": [210, 480], "size": [200, 64] },
+    { "id": "skmemory", "type": "database", "label": "skmemory", "sublabel": "agent memory", "pos": [540, 480], "size": [200, 64] },
+    { "id": "sksec", "type": "security", "label": "sksec", "sublabel": "security agent backbone", "pos": [870, 480], "size": [200, 64] },
+
+    { "id": "skchat", "type": "backend", "label": "skchat", "sublabel": "client comms", "pos": [210, 640], "size": [200, 64] },
+    { "id": "skcomms", "type": "external", "label": "skcomms", "sublabel": "multi-channel transport", "pos": [540, 640], "size": [200, 64] },
+
+    { "id": "skos", "type": "backend", "label": "skos", "sublabel": "deploys every agent", "pos": [210, 800], "size": [200, 64] },
+    { "id": "skalert", "type": "backend", "label": "sk-alert", "sublabel": "reports, notifications", "pos": [540, 800], "size": [200, 64] },
+    { "id": "skscheduler", "type": "backend", "label": "skscheduler", "sublabel": "recurring agent jobs", "pos": [870, 800], "size": [200, 64] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Compute tier (product + runtime)", "wraps": ["skhelp", "skmodel", "skflow", "skdata"] },
+    { "kind": "region", "label": "Core (identity + governance)", "wraps": ["capauth", "skmemory", "sksec"] },
+    { "kind": "region", "label": "Comms", "wraps": ["skchat", "skcomms"] },
+    { "kind": "region", "label": "Platform primitives", "wraps": ["skos", "skalert", "skscheduler"] }
+  ],
+  "connections": [
+    { "id": "customer-to-skhelp", "from": "customer", "to": "skhelp", "label": "subscribes, onboards", "variant": "default" },
+    { "id": "skhelp-to-skmodel", "from": "skhelp", "to": "skmodel", "label": "reasoning", "variant": "default", "fromSide": "left" },
+    { "id": "skhelp-to-skflow", "from": "skhelp", "to": "skflow", "label": "automations", "variant": "default", "fromSide": "left" },
+    { "id": "skhelp-to-skdata", "from": "skhelp", "to": "skdata", "label": "customer + business data", "variant": "default", "fromSide": "right" },
+    { "id": "skhelp-to-capauth", "from": "skhelp", "to": "capauth", "label": "per-customer identity", "variant": "security", "fromSide": "left" },
+    { "id": "skhelp-to-skmemory", "from": "skhelp", "to": "skmemory", "label": "agent memory", "variant": "default", "fromSide": "right" },
+    { "id": "skhelp-to-sksec", "from": "skhelp", "to": "sksec", "label": "security agent", "variant": "security", "fromSide": "right" },
+    { "id": "skhelp-to-skchat", "from": "skhelp", "to": "skchat", "label": "client comms", "variant": "default", "fromSide": "left" },
+    { "id": "skchat-to-skcomms", "from": "skchat", "to": "skcomms", "label": "transport", "variant": "default" },
+    { "id": "skos-to-skhelp", "from": "skos", "to": "skhelp", "label": "deploys", "variant": "dashed", "toSide": "right" },
+    { "id": "skhelp-to-skalert", "from": "skhelp", "to": "skalert", "label": "reports, digests", "variant": "default", "fromSide": "right" },
+    { "id": "skhelp-to-skscheduler", "from": "skhelp", "to": "skscheduler", "label": "scheduled work", "variant": "default", "fromSide": "right" }
+  ]
+}
