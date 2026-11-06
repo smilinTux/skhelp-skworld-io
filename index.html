@@ -238,6 +238,56 @@
         color: #34d399;
       }
 
+      /* ── Architecture ────────────────────────── */
+      .architecture-section {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
+        text-align: center;
+      }
+      .architecture-section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #fafafa;
+      }
+      .architecture-section > p {
+        font-size: 0.95rem;
+        color: #a1a1aa;
+        margin-bottom: 1.5rem;
+      }
+      .arch-card {
+        border: 1px solid #27272a;
+        background: rgba(24,24,27,0.5);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        text-align: left;
+      }
+      .arch-pill {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgba(52,211,153,0.5);
+        background: rgba(52,211,153,0.08);
+        color: #34d399;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 999px;
+        padding: 0.15rem 0.65rem;
+        margin-bottom: 0.75rem;
+      }
+      .arch-card p {
+        font-size: 0.95rem;
+        color: #a1a1aa;
+      }
+      .arch-card a {
+        color: #34d399;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .arch-card a:hover {
+        text-decoration: underline;
+      }
+
       /* ── Install ─────────────────────────────── */
       .install-section {
         max-width: 40rem;
@@ -463,6 +513,7 @@
         <a href="https://skhelp.skworld.io" class="nav-logo">SK<span style="color:#34d399">Help</span></a>
         <div class="nav-links">
             <a href="/docs.html" class="nav-link">Docs</a>
+            <a href="#architecture" class="nav-link">Architecture</a>
             <a href="https://skworld.io" class="nav-link">SKWorld</a>
             <a href="https://skarchitect.io" class="nav-link">SKArchitect</a>
             <a href="https://github.com/smilinTux/skhelp" class="nav-link" target="_blank" rel="noopener">GitHub</a>
@@ -515,6 +566,19 @@
               <div class="feature-dot"></div>
               <h3>SKWorld Integration</h3>
             </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="architecture-section" id="architecture">
+      <h2>Architecture</h2>
+      <p>Explorable, self-contained HTML, dark/light toggle, opens in a new tab.</p>
+      <div class="arch-card">
+        <span class="arch-pill">Interactive</span>
+        <p>Component map of skhelp as a Compute-tier product: the agent roster, the
+        SKWorld primitives it reuses (identity, memory, models, comms), and how a
+        customer request flows through it.
+        <a href="diagrams/skhelp.architecture.html" target="_blank" rel="noopener">Open the interactive diagram &#8599;</a></p>
       </div>
     </section>
 
